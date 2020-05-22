@@ -33,4 +33,5 @@ Run `ng serve --no-open` if you don't want to open the project with your default
 
 ## Lint
 Run `ng lint` to list your error's linting file.
+
 Run `ng lint --fix` to try to automatic lint file in error
