@@ -1,0 +1,25 @@
+<section class="w3-card-4 w3-margin-top w3-auto">
+  <header class="w3-container w3-margin-top app-theme"><h2>Ajouter un magasin</h2></header>
+  <form [formGroup]="storeAddForm" (ngSubmit)="onSubmit()" class="w3-container">
+    <p>
+      <label for="name">Nom*</label>
+      <input type="text" id="name" class="w3-input w3-border" placeholder="Nom" formControlName="name" required />
+    </p>
+    <p>
+      <label for="address">Adresse</label>
+      <input type="text" id="address" class="w3-input w3-border" placeholder="Adresse" formControlName="address" />
+    </p>
+    <p>
+      <label for="zipCode">Code Postal</label>
+      <input type="text" id="zipCode" class="w3-input w3-border" placeholder="Code Postal" formControlName="zipCode" />
+    </p>
+    <p>
+      <label for="city">Ville</label>
+      <input type="text" id="city" class="w3-input w3-border" placeholder="Ville" formControlName="city" />
+    </p>
+    <p class="app-overflow-hidden">
+      <button class="w3-button w3-right" [disabled]="storeAddForm.invalid">Ajouter le magasin</button>
+      <a class="w3-button w3-right w3-margin-right" routerLink="/stores">Retour</a>
+    </p>
+  </form>
+</section>

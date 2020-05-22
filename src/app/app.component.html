@@ -1,0 +1,6 @@
+<app-header></app-header>
+<main class="w3-container">
+  <div class="w3-margin-top app-alert" *ngIf="user === null">Attention vous n'êtes actuellement pas connecté, vous utilisez par conséquence le compte "public", ce dernier est accessible en acces libre, les modifications apportées sur ce compte seront donc répercutées pour toute personne n'utilisant pas son propre compte, de même toutes les modifications des autres utilisateurs n'utilisant pas leur propre compte seront répercuté ici.</div>
+  <router-outlet></router-outlet>
+</main>
+<app-toast></app-toast>

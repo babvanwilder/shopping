@@ -1,0 +1,180 @@
+<section>
+  <header>
+    <h2 class="app-text-theme">
+      {{ store.name }}
+    </h2>
+  </header>
+  <div
+    class="app-alert"
+    *ngIf="articlesC.length === 0"
+  >
+    Il n'y a aucun article pour ce magasin
+  </div>
+
+  <ul class="w3-ul w3-border">
+    <li>
+      <button
+        class="w3-button"
+        (click)="toogleModalAddArticle()"
+      >
+        <fa-icon [icon]="faPlus"></fa-icon>
+      </button>
+      <b class="w3-margin-left">Votre liste</b>
+    </li>
+    <li *ngFor="let articleC of articlesC">
+      <input
+        class="w3-check"
+        type="checkbox"
+        (click)="onUpdateArticleBuy(articleC)"
+        [checked]="articleC.data.buy"
+      >
+      <span
+        class="w3-margin-left"
+        [ngClass]="{'app-article-mask': articleC.data.mask}"
+      >{{ articleC.data.name }} (x{{ articleC.data.quantity }})</span>
+      <button
+        class="w3-button w3-margin-left"
+        (click)="onUpdateArticleMask(articleC)"
+      >
+      <fa-icon [icon]="faEye"></fa-icon>
+    </button>
+      <button
+        class="w3-button w3-margin-left"
+        (click)="toogleModalUpdateArticle(articleC)"
+      >
+      <fa-icon [icon]="faPen"></fa-icon>
+    </button>
+      <button
+        class="w3-button w3-margin-left"
+        (click)="deleteArticle(articleC)"
+      >
+        <fa-icon [icon]="faTrashAlt"></fa-icon>
+      </button>
+    </li>
+  </ul>
+</section>
+
+<div
+  class="w3-modal"
+  [ngClass]="{show: addArticleModalOpen}"
+>
+  <div class="w3-modal-content">
+      <span
+        class="w3-button w3-display-topright"
+        (click)="toogleModalAddArticle()"
+      >&times;</span>
+      <h2 class="w3-container app-theme">
+        Ajout d'un article
+      </h2>
+      <form
+        class="w3-container"
+        [formGroup]="addArticleForm"
+        (submit)="onSubmitAdd()"
+      >
+        <div class="app-alert" *ngIf="addArticleAlertExist !== undefined">
+          {{ addArticleAlertExist }}
+        </div>
+        <div class="app-alert" *ngIf="addArticleAlert !== undefined">
+          {{ addArticleAlert }}
+        </div>
+        <p>
+          <label for="name">Nom</label>
+          <input
+            type="text"
+            id="name"
+            class="w3-input w3-border"
+            placeholder="Nom"
+            formControlName="name"
+            required
+            (keyup)="onCheckExist()"
+          />
+        </p>
+        <p>
+          <label for="quantity">Quantité</label>
+          <input
+            type="number"
+            id="quantity"
+            class="w3-input w3-border"
+            placeholder="Quantité"
+            min="1"
+            formControlName="quantity"
+            required
+          />
+        </p>
+        <p>
+          <button
+            class="w3-button"
+            [disabled]="addArticleForm.invalid"
+          >
+            Ajouter
+          </button>
+          <button
+            type="button"
+            class="w3-button w3-margin-left"
+            [disabled]="addArticleForm.invalid"
+            (click)="onSubmitAddAndClose()"
+          >
+            Ajouter et fermer
+          </button>
+        </p>
+      </form>
+  </div>
+</div>
+
+<div
+  class="w3-modal"
+  [ngClass]="{show: updateArticleModalOpen}"
+>
+  <div class="w3-modal-content">
+      <span
+        class="w3-button w3-display-topright"
+        (click)="toogleModalUpdateArticle()"
+      >&times;</span>
+      <h2 class="w3-container app-theme">
+        Modification d'un article
+      </h2>
+      <form
+        class="w3-container"
+        [formGroup]="updateArticleForm"
+        (submit)="onSubmitUpdate()"
+      >
+        <div class="app-alert" *ngIf="updateArticleAlertExist !== undefined">
+          {{ updateArticleAlertExist }}
+        </div>
+        <div class="app-alert" *ngIf="updateArticleAlert !== undefined">
+          {{ updateArticleAlert }}
+        </div>
+        <p>
+          <label for="nameUpdate">Nom</label>
+          <input
+            type="text"
+            id="nameUpdate"
+            class="w3-input w3-border"
+            placeholder="Nom"
+            formControlName="name"
+            required
+          />
+        </p>
+        <p>
+          <label for="quantityUpdate">Quantité</label>
+          <input
+            type="number"
+            id="quantityUpdate"
+            class="w3-input w3-border"
+            placeholder="Quantité"
+            min="1"
+            formControlName="quantity"
+            required
+          />
+        </p>
+        <p>
+          <button
+            class="w3-button"
+            [disabled]="updateArticleForm.invalid"
+          >
+            Modifier
+          </button>
+        </p>
+      </form>
+  </div>
+</div>

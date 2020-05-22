@@ -1,0 +1,20 @@
+<section>
+  <header><h2 class="app-text-theme"><a routerLink="add" class="w3-badge app-theme"><fa-icon [icon]="faPlus"></fa-icon></a> Mes magasins</h2></header>
+  <div class="app-alert" *ngIf="stores.length === 0">
+    Vous n'avez <strong>aucun</strong> magasin.
+  </div>
+  <div class="w3-section">
+    <article class="w3-card" *ngFor="let store of stores">
+      <header class="w3-container app-theme">
+        <h3><small><fa-icon [icon]="faPen" (click)="toogleModalModify(store)"></fa-icon></small> {{ store.data.name }}</h3>
+        <span (click)="onDelete(store.key)" class="w3-button w3-display-topright">&times;</span>
+      </header>
+      <div class="w3-container grow">
+        <p>{{ store.data.address }}<br>{{ store.data.zipCode }}<br>{{ store.data.city }}</p>
+      </div>
+      <footer class="w3-container w3-margin-bottom">
+          <a class="w3-button" routerLink="{{store.key}}">Voir la liste</a>
+      </footer>
+    </article>
+  </div>
+</section>

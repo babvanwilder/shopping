@@ -1,0 +1,10 @@
+.app-alert {
+  color: white;
+  background-color: $theme-color-l2;
+  padding: 16px;
+  border-left: 6px solid $theme-color-d3;
+}
+
+.app-alert strong {
+  color: $theme-color-d3;
+}

@@ -1,0 +1,15 @@
+/**
+ * Dark 3
+ */
+.app-theme-d3, .app-theme-d3-hover:hover, .app-theme-d3-active:active {
+  color:#fff !important;
+  background-color:$theme-color-d3 !important;
+}
+
+.app-text-theme-d3, .app-text-theme-d3-hover:hover, .app-text-theme-d3-active:active {
+  color:$theme-color-d3 !important;
+}
+
+.app-border-theme-d3, .app-border-theme-d3-hover:hover, .app-border-theme-d3-active:active, .app-border-theme-d3-focus:focus {
+  border-color:$theme-color-d3 !important;
+}

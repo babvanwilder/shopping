@@ -1,0 +1,15 @@
+/**
+ * Dark 4
+ */
+.app-theme-d4, .app-theme-d4-hover:hover, .app-theme-d4-active:active {
+  color:#fff !important;
+  background-color:$theme-color-d4 !important;
+}
+
+.app-text-theme-d4, .app-text-theme-d4-hover:hover, .app-text-theme-d4-active:active {
+  color:$theme-color-d4 !important;
+}
+
+.app-border-theme-d4, .app-border-theme-d4-hover:hover, .app-border-theme-d4-active:active, .app-border-theme-d4-focus:focus {
+  border-color:$theme-color-d4 !important;
+}

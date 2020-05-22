@@ -1,0 +1,43 @@
+@import '../../../../scss/media.scss';
+
+.w3-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.w3-section article {
+  position: relative;
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.w3-section  article div.grow {
+  flex-grow: 1;
+}
+
+.w3-section article footer {
+  text-align: right;
+}
+
+@media (min-width: $medium) {
+  .w3-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin-right: -8px;
+    margin-left: -8px;
+  }
+
+  .w3-section article {
+    width: calc(50% - 16px);
+    margin: 8px;
+  }
+}
+
+@media (min-width: $large) {
+  .w3-section article {
+    width: calc(33.3333% - 16px);
+    margin: 8px;
+  }
+}

@@ -1,0 +1,15 @@
+/**
+ * Light 5
+ */
+.app-theme-l5, .app-theme-l5-hover:hover, .app-theme-l5-active:active {
+  color:#fff !important;
+  background-color:$theme-color-l5 !important;
+}
+
+.app-text-theme-l5, .app-text-theme-l5-hover:hover, .app-text-theme-l5-active:active {
+  color:$theme-color-l5 !important;
+}
+
+.app-border-theme-l5, .app-border-theme-l5-hover:hover, .app-border-theme-l5-active:active .app-border-theme-l5-focus:focus {
+  border-color:$theme-color-l5 !important;
+}

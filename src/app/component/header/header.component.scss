@@ -1,0 +1,46 @@
+@import '../../../scss/media.scss';
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+}
+
+.w3-bar {
+  overflow: initial;
+}
+
+nav .menu {
+  display: none;
+}
+
+nav .menu.show {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100px;
+  width: auto;
+}
+
+.w3-bar-item {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.w3-bar.menu > span.w3-bar-item:first-child {
+  align-self: flex-start;
+}
+
+@media (min-width: $large) {
+  nav .menu, nav .menu.show {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+
+  .menu-margin {
+    margin-left: auto;
+  }
+}

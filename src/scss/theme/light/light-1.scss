@@ -1,0 +1,15 @@
+/**
+ * Light 1
+ */
+.app-theme-l1, .app-theme-l1-hover:hover, .app-theme-l1-active:active {
+  color:#fff !important;
+  background-color:$theme-color-l1 !important;
+}
+
+.app-text-theme-l1, .app-text-theme-l1-hover:hover, .app-text-theme-l1-active:active {
+  color:$theme-color-l1 !important;
+}
+
+.app-border-theme-l1, .app-border-theme-l1-hover:hover, .app-border-theme-l1-active:active, .app-border-theme-l1-focus:focus {
+  border-color:$theme-color-l1 !important;
+}

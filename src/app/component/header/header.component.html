@@ -1,0 +1,13 @@
+<nav class="w3-card-2 w3-bar">
+  <span class="w3-bar-item w3-hide-large" title="Menu" (click)="toogleMenu()"><fa-icon [icon]="faBars"></fa-icon></span>
+  <div class="w3-bar menu" [ngClass]="{show: show}">
+    <span class="w3-bar-item w3-hide-large" title="Fermer" (click)="toogleMenu()"><fa-icon [icon]="faTimes"></fa-icon></span>
+    <a class="w3-bar-item" title="Home" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toogleMobileMenu()"><fa-icon [icon]="faHome"></fa-icon></a>
+    <span class="w3-bar-item" title="Test" (click)="test()" *ngIf="isDev">Test</span>
+    <a class="w3-bar-item" title="Home" routerLink="stores" routerLinkActive="active" (click)="toogleMobileMenu()">Mes magasins</a>
+    <a class="w3-bar-item menu-margin" title="Se connecter" routerLink="auth/signin" routerLinkActive="active" *ngIf="!user" (click)="toogleMobileMenu()">Connexion</a>
+    <a class="w3-bar-item" title="Créer un compte" routerLink="auth/signup" routerLinkActive="active" *ngIf="!user" (click)="toogleMobileMenu()">Créer un compte</a>
+    <a class="w3-bar-item menu-margin" title="{{ user.displayName || user.email }}" routerLink="auth/me" routerLinkActive="active" *ngIf="user" (click)="toogleMobileMenu()">{{ user.displayName || user.email }}</a>
+    <span class="w3-bar-item" title="Déconnexion" *ngIf="user" (click)="signOut()" (click)="toogleMobileMenu()"><fa-icon [icon]="faPowerOff"></fa-icon></span>
+  </div>
+</nav>

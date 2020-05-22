@@ -1,0 +1,15 @@
+/**
+ * Dark 5
+ */
+.app-theme-d5, .app-theme-d5-hover:hover, .app-theme-d5-active:active {
+  color:#fff !important;
+  background-color:$theme-color-d5 !important;
+}
+
+.app-text-theme-d5, .app-text-theme-d5-hover:hover, .app-text-theme-d5-active:active {
+  color:$theme-color-d5 !important;
+}
+
+.app-border-theme-d5, .app-border-theme-d5-hover:hover, .app-border-theme-d5-active:active, .app-border-theme-d5-focus:focus {
+  border-color:$theme-color-d5 !important;
+}

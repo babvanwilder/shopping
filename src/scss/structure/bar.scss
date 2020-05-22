@@ -1,0 +1,9 @@
+.w3-bar {
+  color:#fff !important;
+  background-color:$theme-color !important;
+}
+
+.w3-bar-item:hover, .w3-bar-item.active, .w3-bar-item:active, .w3-bar-item.active:active {
+  color:#fff !important;
+  background-color:$theme-color-d3 !important;
+}

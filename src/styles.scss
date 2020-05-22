@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Use theme color to import real theme color for avoid to change all import on theme color change
+@import './scss/color';
+@import './scss/structure/button';
+@import './scss/structure/form';
+@import './scss/structure/bar';
+@import './scss/structure/alert';
+@import './scss/structure/modal';
+@import './scss/theme/theme';
+
+:focus {
+  outline: none;
+}
+
+.app-overflow-hidden {
+  overflow: hidden;
+}

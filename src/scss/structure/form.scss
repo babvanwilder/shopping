@@ -1,0 +1,11 @@
+label {
+  color:$theme-color !important;
+}
+
+.w3-input {
+  border-color:$theme-color !important;
+}
+
+.w3-input:hover, .w3-input:focus {
+  border-color:$theme-color-d3 !important;
+}

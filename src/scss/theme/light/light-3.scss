@@ -1,0 +1,15 @@
+/**
+ * Light 3
+ */
+.app-theme-l3, .app-theme-l3-hover:hover, .app-theme-l3-active:active {
+  color:#fff !important;
+  background-color:$theme-color-l3 !important;
+}
+
+.app-text-theme-l3, .app-text-theme-l3-hover:hover, .app-text-theme-l3-active:active {
+  color:$theme-color-l3 !important;
+}
+
+.app-border-theme-l3, .app-border-theme-l3-hover:hover, .app-border-theme-l3-active:active .app-border-theme-l3-focus:focus {
+  border-color:$theme-color-l3 !important;
+}

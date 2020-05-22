@@ -1,0 +1,29 @@
+<section class="w3-card-4 w3-margin-top w3-auto">
+  <header class="w3-container w3-margin-top app-theme"><h2>Création de compte</h2></header>
+  <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="w3-container">
+    <p>
+      <label for="email">Email*</label>
+      <input type="email" id="email" class="w3-input w3-border" placeholder="Email" formControlName="email" required />
+    </p>
+    <p>
+      <label for="password">Mot de passe*</label>
+      <input type="password" id="password" class="w3-input w3-border" placeholder="Mot de passe" formControlName="password" required />
+    </p>
+    <p>
+      <label for="firstName">Prénom</label>
+      <input type="text" id="firstName" class="w3-input w3-border" placeholder="Prénom" formControlName="firstName" />
+    </p>
+    <p>
+      <label for="lastName">Nom</label>
+      <input type="text" id="lastName" class="w3-input w3-border" placeholder="Nom" formControlName="lastName" />
+    </p>
+    <p>
+      <label for="displayName">Pseudo</label>
+      <input type="text" id="displayName" class="w3-input w3-border" placeholder="Pseudo" formControlName="displayName" />
+    </p>
+    <p><label><input type="checkbox" class="w3-check" formControlName="rememberMe" /> Se souvenir de moi</label></p>
+    <p>
+      <button class="w3-button w3-block" [disabled]="signUpForm.invalid">Créer</button>
+    </p>
+  </form>
+</section>

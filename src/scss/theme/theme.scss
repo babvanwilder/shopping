@@ -1,0 +1,23 @@
+@import './light/light-1';
+@import './light/light-2';
+@import './light/light-3';
+@import './light/light-4';
+@import './light/light-5';
+@import './dark/dark-1';
+@import './dark/dark-2';
+@import './dark/dark-3';
+@import './dark/dark-4';
+@import './dark/dark-5';
+
+.app-theme, .app-theme-hover:hover, .app-theme-active:active {
+  color:#fff !important;
+  background-color:$theme-color !important;
+}
+
+.app-text-theme, .app-text-theme-hover:hover, .app-text-theme-active:active {
+  color:$theme-color !important;
+}
+
+.app-border-theme, .app-border-theme-hover:hover, .app-border-theme-active:active {
+  border-color:$theme-color !important;
+}
